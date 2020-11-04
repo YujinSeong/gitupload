@@ -1,0 +1,654 @@
+[2020-10-28 08:59:59,874][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 08:59:59,875][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 09:00:46,756][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 09:00:46,757][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 09:02:18,907][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 09:02:18,907][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 09:03:37,028][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 09:03:37,136][INFO|Inspection.py:48] >> DB Connect success
+[2020-10-28 09:03:37,141][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 09:03:37,141][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 09:56:38,744][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 09:56:38,858][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 09:56:38,859][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 09:56:38,859][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 09:56:56,631][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 09:56:56,755][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 09:56:56,756][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 09:56:56,756][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 09:57:17,172][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 09:57:17,299][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 09:57:17,303][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 09:57:17,304][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 09:57:44,011][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 09:57:44,117][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 09:57:44,122][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 09:57:44,124][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 09:57:52,221][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 09:57:52,343][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 09:57:52,344][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 09:57:52,345][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 09:58:01,012][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 09:58:01,146][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 09:58:01,150][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 09:58:01,151][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:01:21,809][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:01:22,094][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:01:22,095][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:01:22,095][ERROR|Inspection.py:31] >> unsupported operand type(s) for +: 'int' and 'numpy.str_'
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 29, in pdm
+    max_curr, new_sum_q, moving_ave_curr = curr_info.MovingAveCurr(tool_cnt, curr, sum_q)
+  File "C:\Users\yujin\PycharmProjects\PdM\moving_ave.py", line 13, in MovingAveCurr
+    if sum(curr) == 0:
+TypeError: unsupported operand type(s) for +: 'int' and 'numpy.str_'
+[2020-10-28 10:01:22,095][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:02:25,486][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:02:25,608][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:02:53,925][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:02:54,049][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:03:09,560][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:03:09,690][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:03:09,693][ERROR|Inspection.py:68] >> 'numpy.str_' object has no attribute 'type'
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 63, in main
+    print("main:", date, serial, tool_cnt, current_data[0].type, pre_sum_current)
+AttributeError: 'numpy.str_' object has no attribute 'type'
+[2020-10-28 10:03:21,245][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:03:21,398][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:04:45,261][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:04:45,390][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:04:45,391][ERROR|Inspection.py:68] >> name 'float64' is not defined
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 62, in main
+    date, serial, tool_cnt, current_data, pre_sum_current = get_data_from_db()
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 56, in get_data_from_db
+    current_data = np.array(sql_val.iloc[0, 3].split(';'), dtype=float64)
+NameError: name 'float64' is not defined
+[2020-10-28 10:04:54,160][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:04:54,319][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:05:02,739][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:05:02,855][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:05:09,576][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:05:09,698][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:05:09,699][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:05:09,699][ERROR|Inspection.py:31] >> ufunc 'add' did not contain a loop with signature matching types (dtype('<U32'), dtype('<U32')) -> dtype('<U32')
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 29, in pdm
+    max_curr, new_sum_q, moving_ave_curr = curr_info.MovingAveCurr(tool_cnt, curr, sum_q)
+  File "C:\Users\yujin\PycharmProjects\PdM\moving_ave.py", line 21, in MovingAveCurr
+    self.new_sum_q = sum_q + self.max_curr
+numpy.core._exceptions.UFuncTypeError: ufunc 'add' did not contain a loop with signature matching types (dtype('<U32'), dtype('<U32')) -> dtype('<U32')
+[2020-10-28 10:05:09,700][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:05:44,231][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:05:44,358][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:06:02,447][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:06:02,571][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:06:07,206][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:06:07,380][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:06:07,380][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:06:07,381][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:06:34,315][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:06:34,449][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:06:34,454][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:06:34,454][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:08:43,296][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:08:43,467][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:08:43,470][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:08:43,470][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:20:02,939][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:20:02,949][INFO|Inspection.py:48] >> DB Connect fail
+[2020-10-28 10:20:02,949][ERROR|Inspection.py:49] >> (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10065)\n')
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 636, in pymssql.connect
+  File "src\_mssql.pyx", line 1964, in _mssql.connect
+  File "src\_mssql.pyx", line 682, in _mssql.MSSQLConnection.__init__
+  File "src\_mssql.pyx", line 1690, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10065)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 41, in get_data_from_db
+    conn = pymssql.connect(server="172.20.56.220", user="essmgr", password="essmgr", database="NEXPOM")
+  File "src\pymssql.pyx", line 642, in pymssql.connect
+pymssql.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10065)\n')
+[2020-10-28 10:20:02,950][ERROR|Inspection.py:66] >> cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 62, in main
+    date, serial, tool_cnt, current_data, pre_sum_current = get_data_from_db()
+TypeError: cannot unpack non-iterable NoneType object
+[2020-10-28 10:21:42,312][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:21:42,428][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:21:42,433][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:21:42,434][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:24:37,070][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:24:37,187][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:24:37,192][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:24:37,193][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:31:22,561][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:31:22,709][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:31:22,715][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:31:22,716][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:31:22,716][INFO|Inspection.py:62] >> Data Upload..
+[2020-10-28 10:31:22,716][INFO|Inspection.py:73] >> Upload Fail
+[2020-10-28 10:31:22,716][ERROR|Inspection.py:86] >> name 'e' is not defined
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 63, in upload_data_to_db
+    cursor.execute('''INSERT ESS_PDM_RESULT(JOB_DATE, WC,OP_NO, MCH_CODE, SERIAL_NO, TOOL_CNT, MAX_CURRENT, SUM_CURRENT, MOVING_AVG_CURRENT, AVG_PRESSURE,STD_PRESSURE, Z_VALUE, MINUS_TREND, PLUS_TREND, FLAG)
+NameError: name 'cursor' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 84, in main
+    upload_data_to_db(serial, tool_cnt, max_curr, new_sum_q, moving_ave_curr)
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 74, in upload_data_to_db
+    logger.exception(e)
+NameError: name 'e' is not defined
+[2020-10-28 10:32:12,502][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:32:12,647][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:32:12,652][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:32:12,653][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:32:12,654][INFO|Inspection.py:62] >> Data Upload..
+[2020-10-28 10:32:12,654][INFO|Inspection.py:73] >> Upload Fail
+[2020-10-28 10:32:12,654][ERROR|Inspection.py:74] >> name 'cursor' is not defined
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 63, in upload_data_to_db
+    cursor.execute('''INSERT ESS_PDM_RESULT(JOB_DATE, WC,OP_NO, MCH_CODE, SERIAL_NO, TOOL_CNT, MAX_CURRENT, SUM_CURRENT, MOVING_AVG_CURRENT, AVG_PRESSURE,STD_PRESSURE, Z_VALUE, MINUS_TREND, PLUS_TREND, FLAG)
+NameError: name 'cursor' is not defined
+[2020-10-28 10:33:35,525][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:33:35,651][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:33:35,656][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:33:35,657][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:33:35,657][INFO|Inspection.py:74] >> Upload Fail
+[2020-10-28 10:33:35,657][ERROR|Inspection.py:75] >> name 'conn' is not defined
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 62, in upload_data_to_db
+    cursor = conn.cursor()
+NameError: name 'conn' is not defined
+[2020-10-28 10:34:17,891][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:34:18,015][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:34:18,021][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:34:18,022][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:34:18,101][INFO|Inspection.py:65] >> Data Upload..
+[2020-10-28 10:34:18,182][INFO|Inspection.py:79] >> Upload Done
+[2020-10-28 10:36:52,939][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:36:53,144][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:36:53,229][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:36:53,230][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:36:53,378][INFO|Inspection.py:72] >> Data Upload..
+[2020-10-28 10:36:53,484][INFO|Inspection.py:86] >> Upload Done
+[2020-10-28 10:37:12,828][INFO|Inspection.py:40] >> DB Connect
+[2020-10-28 10:37:13,068][INFO|Inspection.py:51] >> DB Connect success
+[2020-10-28 10:37:13,143][INFO|Inspection.py:27] >> Caculate Start
+[2020-10-28 10:37:13,143][INFO|Inspection.py:36] >> Caculate Done
+[2020-10-28 10:37:13,278][INFO|Inspection.py:72] >> Data Upload..
+[2020-10-28 10:37:13,368][INFO|Inspection.py:86] >> Upload Done
+[2020-10-28 10:47:46,116][INFO|Inspection.py:51] >> DB Connect
+[2020-10-28 10:47:46,339][INFO|Inspection.py:62] >> DB Connect success
+[2020-10-28 10:47:46,411][INFO|Inspection.py:32] >> Caculate Start
+[2020-10-28 10:47:46,412][INFO|Inspection.py:41] >> Caculate Done
+[2020-10-28 10:47:46,532][INFO|Inspection.py:82] >> Data Upload..
+[2020-10-28 10:47:46,650][INFO|Inspection.py:96] >> Upload Done
+[2020-10-28 10:52:16,784][INFO|Inspection.py:53] >> DB Connect
+[2020-10-28 10:52:16,960][INFO|Inspection.py:66] >> DB Connect success
+[2020-10-28 10:52:17,027][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 10:52:17,027][INFO|Inspection.py:42] >> Caculate Done
+[2020-10-28 10:52:17,143][INFO|Inspection.py:87] >> Data Upload..
+[2020-10-28 10:52:17,218][INFO|Inspection.py:102] >> Upload Done
+[2020-10-28 10:53:33,950][INFO|Inspection.py:53] >> DB Connect
+[2020-10-28 10:53:34,082][INFO|Inspection.py:66] >> DB Connect success
+[2020-10-28 10:53:34,156][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 10:53:34,157][INFO|Inspection.py:42] >> Caculate Done
+[2020-10-28 10:53:34,312][INFO|Inspection.py:87] >> Data Upload..
+[2020-10-28 10:53:34,405][INFO|Inspection.py:102] >> PJ1AA340129K, 70 Upload Done
+[2020-10-28 11:43:26,777][INFO|Inspection.py:53] >> DB Connect
+[2020-10-28 11:43:27,009][INFO|Inspection.py:66] >> DB Connect success
+[2020-10-28 11:43:27,078][INFO|Inspection.py:78] >> flag change done
+[2020-10-28 11:43:27,078][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 11:43:27,079][INFO|Inspection.py:42] >> Caculate Done
+[2020-10-28 11:43:27,231][INFO|Inspection.py:97] >> Data Upload..
+[2020-10-28 11:43:27,476][INFO|Inspection.py:112] >> serial:PJ1AA340172K, tool_cnt:85 Upload Done
+[2020-10-28 11:44:44,689][INFO|Inspection.py:53] >> DB Connect
+[2020-10-28 11:44:44,854][INFO|Inspection.py:66] >> DB Connect success
+[2020-10-28 11:44:44,915][INFO|Inspection.py:78] >> flag change done
+[2020-10-28 11:44:44,916][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 11:44:44,916][ERROR|Inspection.py:37] >> 'int' object is not callable
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 35, in pdm
+    max_curr, new_sum_q, moving_ave_curr = curr_info.moving_ave_curr(tool_cnt, curr, sum_q)
+TypeError: 'int' object is not callable
+[2020-10-28 11:44:44,917][INFO|Inspection.py:42] >> Caculate Done
+[2020-10-28 11:44:44,918][ERROR|Inspection.py:127] >> cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 124, in main
+    max_curr, new_sum_q, moving_ave_curr = pdm(tool_cnt, current_data, pre_sum_q)
+TypeError: cannot unpack non-iterable NoneType object
+[2020-10-28 11:46:51,405][INFO|Inspection.py:53] >> DB Connect
+[2020-10-28 11:46:51,611][INFO|Inspection.py:66] >> DB Connect success
+[2020-10-28 11:46:51,684][INFO|Inspection.py:78] >> flag change done
+[2020-10-28 11:46:51,685][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 11:46:51,685][ERROR|Inspection.py:37] >> 'int' object is not callable
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 35, in pdm
+    max_curr, new_sum_q, moving_ave_curr = curr_info.moving_ave_curr(tool_cnt, curr, sum_q)
+TypeError: 'int' object is not callable
+[2020-10-28 11:46:51,687][INFO|Inspection.py:42] >> Caculate Done
+[2020-10-28 11:46:51,687][ERROR|Inspection.py:127] >> cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 124, in main
+    max_curr, new_sum_q, moving_ave_curr = pdm(tool_cnt, current_data, pre_sum_q)
+TypeError: cannot unpack non-iterable NoneType object
+[2020-10-28 11:48:26,368][INFO|Inspection.py:53] >> DB Connect
+[2020-10-28 11:48:26,492][INFO|Inspection.py:66] >> DB Connect success
+[2020-10-28 11:48:26,529][INFO|Inspection.py:78] >> flag change done
+[2020-10-28 11:48:26,529][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 11:48:26,529][INFO|Inspection.py:42] >> Caculate Done
+[2020-10-28 11:48:26,614][INFO|Inspection.py:97] >> Data Upload..
+[2020-10-28 11:48:26,682][INFO|Inspection.py:112] >> serial:PJVCA340079K, tool_cnt:90 Upload Done
+[2020-10-28 11:48:56,172][INFO|Inspection.py:53] >> DB Connect
+[2020-10-28 11:48:56,338][INFO|Inspection.py:66] >> DB Connect success
+[2020-10-28 11:48:56,407][INFO|Inspection.py:78] >> flag change done
+[2020-10-28 11:48:56,407][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 11:48:56,407][INFO|Inspection.py:42] >> Caculate Done
+[2020-10-28 11:48:57,028][INFO|Inspection.py:97] >> Data Upload..
+[2020-10-28 11:48:57,101][INFO|Inspection.py:112] >> serial:PJ1AA340180K, tool_cnt:88 Upload Done
+[2020-10-28 11:49:45,027][INFO|Inspection.py:53] >> DB Connect
+[2020-10-28 11:49:45,179][INFO|Inspection.py:66] >> DB Connect success
+[2020-10-28 11:49:45,226][INFO|Inspection.py:78] >> flag change done
+[2020-10-28 11:49:45,226][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 11:49:45,227][INFO|Inspection.py:42] >> Caculate Done
+[2020-10-28 11:49:45,377][INFO|Inspection.py:97] >> Data Upload..
+[2020-10-28 11:49:45,474][INFO|Inspection.py:112] >> serial:PJ1AA340177K, tool_cnt:87 Upload Done
+[2020-10-28 11:59:47,130][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 11:59:47,252][INFO|Inspection.py:67] >> DB Connect success
+[2020-10-28 11:59:47,297][INFO|Inspection.py:79] >> flag change done
+[2020-10-28 11:59:47,297][INFO|Inspection.py:83] >> get data - date:2020-10-28 11:57:11.143000, serial:PJVCA340111K, tool_cnt:101
+[2020-10-28 11:59:47,301][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 11:59:47,301][INFO|Inspection.py:39] >> pdm reault - max_curr:2.1638479999999998, new_sum_q:44.035304399999994, moving_ave_curr:0.43599311287128706
+[2020-10-28 11:59:47,301][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 11:59:47,401][INFO|Inspection.py:101] >> Data Upload..
+[2020-10-28 11:59:47,477][INFO|Inspection.py:116] >> serial:PJVCA340111K, tool_cnt:101 Upload Done
+[2020-10-28 12:01:54,948][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 12:01:55,103][INFO|Inspection.py:67] >> DB Connect success
+[2020-10-28 12:01:55,182][INFO|Inspection.py:79] >> flag change done
+[2020-10-28 12:01:55,183][INFO|Inspection.py:83] >> get data - date:2020-10-28 11:56:23.417000, serial:PJVDA340115K, tool_cnt:100
+[2020-10-28 12:01:55,184][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 12:01:55,184][INFO|Inspection.py:39] >> pdm reault - max_curr:2.28214265, sum_q:46.31744704999999, new_sum_q:44.035304399999994, moving_ave_curr:0.46317447049999994
+[2020-10-28 12:01:55,184][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 12:01:55,346][INFO|Inspection.py:101] >> Data Upload..
+[2020-10-28 12:01:55,432][INFO|Inspection.py:116] >> serial:PJVDA340115K, tool_cnt:100 Upload Done
+[2020-10-28 12:02:48,889][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 12:02:49,065][INFO|Inspection.py:67] >> DB Connect success
+[2020-10-28 12:02:49,104][INFO|Inspection.py:79] >> flag change done
+[2020-10-28 12:02:49,105][INFO|Inspection.py:83] >> get data - date:2020-10-28 12:01:59.840000, serial:PJVCA340113K, tool_cnt:102
+[2020-10-28 12:02:49,105][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 12:02:49,106][INFO|Inspection.py:39] >> pdm reault - max_curr:2.1576964, sum_q:46.31744704999999, new_sum_q:48.47514344999999, moving_ave_curr:0.47524650441176464
+[2020-10-28 12:02:49,106][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 12:02:49,203][INFO|Inspection.py:101] >> Data Upload..
+[2020-10-28 12:02:49,287][INFO|Inspection.py:116] >> serial:PJVCA340113K, tool_cnt:102 Upload Done
+[2020-10-28 12:03:48,839][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 12:03:49,002][INFO|Inspection.py:67] >> DB Connect success
+[2020-10-28 12:03:49,054][INFO|Inspection.py:79] >> flag change done
+[2020-10-28 12:03:49,054][INFO|Inspection.py:83] >> get data - date:2020-10-28 12:02:42.233000, serial:PJVDA340121K, tool_cnt:103
+[2020-10-28 12:03:49,054][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 12:03:49,057][INFO|Inspection.py:39] >> pdm reault - max_curr:2.09175195, sum_q:48.47514344999999, new_sum_q:50.56689539999999, moving_ave_curr:0.49094073203883487
+[2020-10-28 12:03:49,057][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 12:03:49,172][INFO|Inspection.py:101] >> Data Upload..
+[2020-10-28 12:03:49,268][INFO|Inspection.py:116] >> Upload Done
+[2020-10-28 12:03:59,978][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 12:04:03,433][INFO|Inspection.py:67] >> DB Connect success
+[2020-10-28 12:04:03,473][INFO|Inspection.py:79] >> flag change done
+[2020-10-28 12:04:03,477][INFO|Inspection.py:83] >> get data - date:2020-10-28 11:55:40.060000, serial:PJVCA340107K, tool_cnt:99
+[2020-10-28 12:04:03,477][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 12:04:03,478][INFO|Inspection.py:39] >> pdm reault - max_curr:2.25413861, sum_q:50.56689539999999, new_sum_q:52.82103400999999, moving_ave_curr:0.533545798080808
+[2020-10-28 12:04:03,478][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 12:04:03,571][INFO|Inspection.py:101] >> Data Upload..
+[2020-10-28 12:04:03,675][INFO|Inspection.py:116] >> Upload Done
+[2020-10-28 12:04:18,296][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 12:04:18,519][INFO|Inspection.py:67] >> DB Connect success
+[2020-10-28 12:04:18,605][INFO|Inspection.py:79] >> flag change done
+[2020-10-28 12:04:18,607][INFO|Inspection.py:83] >> get data - date:2020-10-28 12:03:47.807000, serial:PJVDA340117K, tool_cnt:104
+[2020-10-28 12:04:18,607][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 12:04:18,609][INFO|Inspection.py:39] >> pdm reault - max_curr:2.1339960299999996, sum_q:52.82103400999999, new_sum_q:54.95503003999999, moving_ave_curr:0.5284137503846152
+[2020-10-28 12:04:18,609][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 12:04:18,766][INFO|Inspection.py:101] >> Data Upload..
+[2020-10-28 12:04:18,941][INFO|Inspection.py:116] >> Upload Done
+[2020-10-28 12:04:24,585][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 12:04:24,758][INFO|Inspection.py:67] >> DB Connect success
+[2020-10-28 12:04:24,811][INFO|Inspection.py:79] >> flag change done
+[2020-10-28 12:04:24,812][INFO|Inspection.py:83] >> get data - date:2020-10-28 11:54:53.400000, serial:PJVCA340105K, tool_cnt:98
+[2020-10-28 12:04:24,812][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 12:04:24,812][INFO|Inspection.py:39] >> pdm reault - max_curr:2.21879485, sum_q:54.95503003999999, new_sum_q:57.17382488999999, moving_ave_curr:0.5834063764285713
+[2020-10-28 12:04:24,812][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 12:04:24,897][INFO|Inspection.py:101] >> Data Upload..
+[2020-10-28 12:04:24,963][INFO|Inspection.py:116] >> Upload Done
+[2020-10-28 12:04:33,106][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 12:04:34,309][INFO|Inspection.py:67] >> DB Connect success
+[2020-10-28 12:04:34,378][INFO|Inspection.py:79] >> flag change done
+[2020-10-28 12:04:34,378][INFO|Inspection.py:83] >> get data - date:2020-10-28 11:54:09.310000, serial:PJVCA340109K, tool_cnt:97
+[2020-10-28 12:04:34,378][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 12:04:34,383][INFO|Inspection.py:39] >> pdm reault - max_curr:2.17678155, sum_q:57.17382488999999, new_sum_q:59.35060643999999, moving_ave_curr:0.6118619220618556
+[2020-10-28 12:04:34,383][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 12:04:34,503][INFO|Inspection.py:101] >> Data Upload..
+[2020-10-28 12:04:34,711][INFO|Inspection.py:116] >> Upload Done
+[2020-10-28 12:04:38,572][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 12:04:42,083][INFO|Inspection.py:67] >> DB Connect success
+[2020-10-28 12:04:42,479][INFO|Inspection.py:79] >> flag change done
+[2020-10-28 12:04:42,482][INFO|Inspection.py:83] >> get data - date:2020-10-28 11:53:22.970000, serial:PJVCA340101K, tool_cnt:96
+[2020-10-28 12:04:42,482][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 12:04:42,483][INFO|Inspection.py:39] >> pdm reault - max_curr:2.2109134800000003, sum_q:59.35060643999999, new_sum_q:61.561519919999995, moving_ave_curr:0.6412658324999999
+[2020-10-28 12:04:42,483][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 12:04:42,774][INFO|Inspection.py:101] >> Data Upload..
+[2020-10-28 12:04:42,970][INFO|Inspection.py:116] >> Upload Done
+[2020-10-28 12:21:30,990][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 12:21:31,140][INFO|Inspection.py:67] >> DB Connect success
+[2020-10-28 12:21:31,204][INFO|Inspection.py:79] >> flag change done
+[2020-10-28 12:21:31,208][INFO|Inspection.py:83] >> get data - date:2020-10-28 12:19:49.677000, serial:PJVDA340196K, tool_cnt:123
+[2020-10-28 12:21:31,208][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 12:21:31,210][INFO|Inspection.py:39] >> pdm reault - max_curr:2.23680728, sum_q:61.561519919999995, new_sum_q:63.798327199999996, moving_ave_curr:0.5186855869918698
+[2020-10-28 12:21:31,210][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 12:21:31,320][INFO|Inspection.py:101] >> Data Upload..
+[2020-10-28 12:21:31,403][INFO|Inspection.py:116] >> Upload Done
+[2020-10-28 14:14:06,604][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:14:06,763][INFO|Inspection.py:73] >> DB Connect success
+[2020-10-28 14:14:06,798][INFO|Inspection.py:86] >> flag change done
+[2020-10-28 14:14:06,802][INFO|Inspection.py:90] >> get data - date:2020-10-28 14:13:24.877000, serial:PJXCA1104282, tool_cnt:230
+[2020-10-28 14:14:06,802][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 14:14:06,803][INFO|Inspection.py:39] >> pdm reault - max_curr:2.25418744, sum_q:63.798327199999996, new_sum_q:66.05251464, moving_ave_curr:0.28718484626086954
+[2020-10-28 14:14:06,803][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 14:14:06,875][INFO|Inspection.py:108] >> Data Upload..
+[2020-10-28 14:14:06,949][INFO|Inspection.py:123] >> Upload Done
+[2020-10-28 14:14:40,018][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:14:40,168][INFO|Inspection.py:73] >> DB Connect success
+[2020-10-28 14:14:40,206][INFO|Inspection.py:86] >> flag change done
+[2020-10-28 14:14:40,209][INFO|Inspection.py:90] >> get data - date:2020-10-28 14:14:12.420000, serial:PJXCA1104272, tool_cnt:231
+[2020-10-28 14:14:40,209][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 14:14:40,210][INFO|Inspection.py:39] >> pdm reault - max_curr:2.19067102, sum_q:66.05251464, new_sum_q:68.24318566, moving_ave_curr:0.2954250461471861
+[2020-10-28 14:14:40,210][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 14:14:40,281][INFO|Inspection.py:108] >> Data Upload..
+[2020-10-28 14:14:40,351][INFO|Inspection.py:123] >> Upload Done
+[2020-10-28 14:33:43,551][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:33:43,724][INFO|Inspection.py:73] >> DB Connect success
+[2020-10-28 14:33:43,728][ERROR|Inspection.py:137] >> list index out of range
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 133, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 79, in get_data_from_db
+    sum_q = np.array(pre_sum_current_sql[0][0], dtype=np.float64)
+IndexError: list index out of range
+[2020-10-28 14:34:57,086][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:34:57,369][INFO|Inspection.py:74] >> DB Connect success
+[2020-10-28 14:34:57,375][ERROR|Inspection.py:138] >> list index out of range
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 134, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 80, in get_data_from_db
+    sum_q = np.array(pre_sum_current_sql[0][0], dtype=np.float64)
+IndexError: list index out of range
+[2020-10-28 14:37:00,273][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:37:00,460][INFO|Inspection.py:76] >> DB Connect success
+[2020-10-28 14:37:00,466][ERROR|Inspection.py:139] >> 'int' object is not subscriptable
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 135, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 82, in get_data_from_db
+    pre_sum_q = np.array(pre_sum_q[0][0], dtype=np.float64)
+TypeError: 'int' object is not subscriptable
+[2020-10-28 14:38:38,607][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:38:38,763][INFO|Inspection.py:74] >> DB Connect success
+[2020-10-28 14:38:38,804][INFO|Inspection.py:88] >> flag change done
+[2020-10-28 14:38:38,805][INFO|Inspection.py:92] >> get data - date:2020-10-28 14:18:50.570000, serial:PJXCA1104162, tool_cnt:237
+[2020-10-28 14:38:38,805][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 14:38:38,805][INFO|Inspection.py:39] >> pdm reault - max_curr:2.2534354, sum_q:0, new_sum_q:2.2534354, moving_ave_curr:0.009508166244725738
+[2020-10-28 14:38:38,805][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 14:38:38,913][INFO|Inspection.py:110] >> Data Upload..
+[2020-10-28 14:38:38,984][INFO|Inspection.py:125] >> Upload Done
+[2020-10-28 14:39:38,474][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:39:38,726][INFO|Inspection.py:74] >> DB Connect success
+[2020-10-28 14:39:38,804][INFO|Inspection.py:88] >> flag change done
+[2020-10-28 14:39:38,805][INFO|Inspection.py:92] >> get data - date:2020-10-28 14:18:02.853000, serial:PJXCA1104172, tool_cnt:236
+[2020-10-28 14:39:38,805][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 14:39:38,806][INFO|Inspection.py:39] >> pdm reault - max_curr:2.31215154, sum_q:0, new_sum_q:2.31215154, moving_ave_curr:0.009797252288135593
+[2020-10-28 14:39:38,806][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 14:39:38,984][INFO|Inspection.py:110] >> Data Upload..
+[2020-10-28 14:39:39,148][INFO|Inspection.py:125] >> Upload Done
+[2020-10-28 14:41:20,301][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:41:20,430][INFO|Inspection.py:74] >> DB Connect success
+[2020-10-28 14:41:20,430][ERROR|Inspection.py:139] >> Empty data passed with indices specified.
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\internals\managers.py", line 1662, in create_block_manager_from_blocks
+    make_block(values=blocks[0], placement=slice(0, len(axes[0])))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\internals\blocks.py", line 2722, in make_block
+    return klass(values, ndim=ndim, placement=placement)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\internals\blocks.py", line 131, in __init__
+    f"Wrong number of items passed {len(self.values)}, "
+ValueError: Wrong number of items passed 1, placement implies 4
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 135, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 75, in get_data_from_db
+    sql_val = pd.DataFrame(np.array(sql_val), columns=['JOB_DATE', 'SERIAL_NO', 'TOOL_CNT', 'CURRENT_DATA'])
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\frame.py", line 497, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\internals\construction.py", line 234, in init_ndarray
+    return create_block_manager_from_blocks(block_values, [columns, index])
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\internals\managers.py", line 1672, in create_block_manager_from_blocks
+    raise construction_error(tot_items, blocks[0].shape[1:], axes, e)
+ValueError: Empty data passed with indices specified.
+[2020-10-28 14:42:17,002][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:42:17,222][INFO|Inspection.py:74] >> DB Connect success
+[2020-10-28 14:42:17,224][ERROR|Inspection.py:139] >> Empty data passed with indices specified.
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\internals\managers.py", line 1662, in create_block_manager_from_blocks
+    make_block(values=blocks[0], placement=slice(0, len(axes[0])))
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\internals\blocks.py", line 2722, in make_block
+    return klass(values, ndim=ndim, placement=placement)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\internals\blocks.py", line 131, in __init__
+    f"Wrong number of items passed {len(self.values)}, "
+ValueError: Wrong number of items passed 1, placement implies 4
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 135, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 75, in get_data_from_db
+    sql_val = pd.DataFrame(np.array(sql_val), columns=['JOB_DATE', 'SERIAL_NO', 'TOOL_CNT', 'CURRENT_DATA'])
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\frame.py", line 497, in __init__
+    mgr = init_ndarray(data, index, columns, dtype=dtype, copy=copy)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\internals\construction.py", line 234, in init_ndarray
+    return create_block_manager_from_blocks(block_values, [columns, index])
+  File "C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\internals\managers.py", line 1672, in create_block_manager_from_blocks
+    raise construction_error(tot_items, blocks[0].shape[1:], axes, e)
+ValueError: Empty data passed with indices specified.
+[2020-10-28 14:48:10,698][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:48:10,860][INFO|Inspection.py:74] >> DB Connect success
+[2020-10-28 14:48:10,860][ERROR|Inspection.py:140] >> 'list' object has no attribute 'iloc'
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 136, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 77, in get_data_from_db
+    date = sql_val.iloc[0, 0]
+AttributeError: 'list' object has no attribute 'iloc'
+[2020-10-28 14:48:47,632][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:48:47,844][INFO|Inspection.py:74] >> DB Connect success
+[2020-10-28 14:48:47,845][ERROR|Inspection.py:140] >> 'list' object has no attribute 'dtype'
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 136, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 75, in get_data_from_db
+    print(sql_val.dtype)
+AttributeError: 'list' object has no attribute 'dtype'
+[2020-10-28 14:52:27,196][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 14:52:27,338][INFO|Inspection.py:72] >> DB Connect fail
+[2020-10-28 14:52:27,338][ERROR|Inspection.py:73] >> No new data
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 67, in get_data_from_db
+    raise ValueError("No new data")
+ValueError: No new data
+[2020-10-28 14:52:27,338][ERROR|Inspection.py:140] >> cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 136, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+TypeError: cannot unpack non-iterable NoneType object
+[2020-10-28 15:00:36,617][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 15:00:36,759][INFO|Inspection.py:73] >> DB Connect success
+[2020-10-28 15:00:36,803][INFO|Inspection.py:90] >> flag change done
+[2020-10-28 15:00:36,804][INFO|Inspection.py:94] >> get data - date:0, serial:0, tool_cnt:0
+[2020-10-28 15:00:36,804][ERROR|Inspection.py:143] >> No new data
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 139, in main
+    raise ValueError("No new data")
+ValueError: No new data
+[2020-10-28 15:08:13,837][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 15:08:14,032][INFO|Inspection.py:73] >> DB Connect success
+[2020-10-28 15:08:14,101][INFO|Inspection.py:90] >> flag change done
+[2020-10-28 15:08:14,106][INFO|Inspection.py:94] >> get data - date:2020-10-28 14:18:50.570000, serial:PJXCA1104162, tool_cnt:237
+[2020-10-28 15:08:14,106][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 15:08:14,107][INFO|Inspection.py:39] >> pdm reault - max_curr:2.2534354, sum_q:0, new_sum_q:2.2534354, moving_ave_curr:0.009508166244725738
+[2020-10-28 15:08:14,107][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 15:08:14,238][INFO|Inspection.py:112] >> Data Upload..
+[2020-10-28 15:08:14,354][INFO|Inspection.py:127] >> Upload Done
+[2020-10-28 15:08:41,677][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 15:08:41,823][INFO|Inspection.py:73] >> DB Connect success
+[2020-10-28 15:08:41,869][INFO|Inspection.py:90] >> flag change done
+[2020-10-28 15:08:41,870][INFO|Inspection.py:94] >> get data - date:2020-10-28 14:18:02.853000, serial:PJXCA1104172, tool_cnt:236
+[2020-10-28 15:08:41,870][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 15:08:41,871][INFO|Inspection.py:39] >> pdm reault - max_curr:2.31215154, sum_q:2.2534354, new_sum_q:4.565586939999999, moving_ave_curr:0.019345707372881354
+[2020-10-28 15:08:41,871][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 15:08:41,948][INFO|Inspection.py:112] >> Data Upload..
+[2020-10-28 15:08:42,019][INFO|Inspection.py:127] >> Upload Done
+[2020-10-28 15:09:11,890][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 15:09:12,075][INFO|Inspection.py:73] >> DB Connect success
+[2020-10-28 15:09:12,118][INFO|Inspection.py:90] >> flag change done
+[2020-10-28 15:09:12,120][INFO|Inspection.py:94] >> get data - date:0, serial:0, tool_cnt:0
+[2020-10-28 15:09:12,120][ERROR|Inspection.py:143] >> No new data
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 139, in main
+    raise ValueError("No new data")
+ValueError: No new data
+[2020-10-28 15:11:19,738][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 15:11:19,947][INFO|Inspection.py:73] >> DB Connect success
+[2020-10-28 15:11:20,007][INFO|Inspection.py:90] >> flag change done
+[2020-10-28 15:11:20,011][INFO|Inspection.py:94] >> get data - date:2020-10-28 14:18:50.570000, serial:PJXCA1104162, tool_cnt:237
+[2020-10-28 15:11:20,011][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 15:11:20,012][INFO|Inspection.py:39] >> pdm reault - max_curr:2.2534354, sum_q:4.565586939999999, new_sum_q:6.819022339999999, moving_ave_curr:0.02877224616033755
+[2020-10-28 15:11:20,012][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 15:11:20,136][INFO|Inspection.py:112] >> Data Upload..
+[2020-10-28 15:11:20,296][INFO|Inspection.py:127] >> Upload Done
+[2020-10-28 15:11:46,731][INFO|Inspection.py:54] >> DB Connect
+[2020-10-28 15:11:47,153][INFO|Inspection.py:73] >> DB Connect success
+[2020-10-28 15:11:47,275][INFO|Inspection.py:90] >> flag change done
+[2020-10-28 15:11:47,279][INFO|Inspection.py:94] >> get data - date:2020-10-28 14:18:50.570000, serial:PJXCA1104162, tool_cnt:237
+[2020-10-28 15:11:47,279][INFO|Inspection.py:33] >> Caculate Start
+[2020-10-28 15:11:47,280][INFO|Inspection.py:39] >> pdm reault - max_curr:2.2534354, sum_q:6.819022339999999, new_sum_q:9.072457739999999, moving_ave_curr:0.03828041240506329
+[2020-10-28 15:11:47,280][INFO|Inspection.py:43] >> Caculate Done
+[2020-10-28 15:11:47,445][INFO|Inspection.py:112] >> Data Upload..
+[2020-10-28 15:11:47,592][INFO|Inspection.py:127] >> Upload Done
+[2020-10-29 14:26:49,925][INFO|Inspection.py:54] >> DB Connect
+[2020-10-29 14:27:10,961][INFO|Inspection.py:70] >> DB Connect fail
+[2020-10-29 14:27:10,961][ERROR|Inspection.py:71] >> (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10060)\n')
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 636, in pymssql.connect
+  File "src\_mssql.pyx", line 1964, in _mssql.connect
+  File "src\_mssql.pyx", line 682, in _mssql.MSSQLConnection.__init__
+  File "src\_mssql.pyx", line 1690, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10060)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 55, in get_data_from_db
+    conn = pymssql.connect(server="172.20.56.220", user="essmgr", password="essmgr", database="NEXPOM")
+  File "src\pymssql.pyx", line 642, in pymssql.connect
+pymssql.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10060)\n')
+[2020-10-29 14:27:10,962][ERROR|Inspection.py:143] >> cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 137, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+TypeError: cannot unpack non-iterable NoneType object
+[2020-10-29 14:28:03,398][INFO|Inspection.py:54] >> DB Connect
+[2020-10-29 14:28:24,447][INFO|Inspection.py:70] >> DB Connect fail
+[2020-10-29 14:28:24,447][ERROR|Inspection.py:71] >> (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10060)\n')
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 636, in pymssql.connect
+  File "src\_mssql.pyx", line 1964, in _mssql.connect
+  File "src\_mssql.pyx", line 682, in _mssql.MSSQLConnection.__init__
+  File "src\_mssql.pyx", line 1690, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10060)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 55, in get_data_from_db
+    conn = pymssql.connect(server="172.20.56.220", user="essmgr", password="essmgr", database="NEXPOM")
+  File "src\pymssql.pyx", line 642, in pymssql.connect
+pymssql.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10060)\n')
+[2020-10-29 14:28:24,447][ERROR|Inspection.py:143] >> cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 137, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+TypeError: cannot unpack non-iterable NoneType object
+[2020-10-29 14:34:52,320][INFO|Inspection.py:54] >> DB Connect
+[2020-10-29 14:35:13,346][INFO|Inspection.py:70] >> DB Connect fail
+[2020-10-29 14:35:13,346][ERROR|Inspection.py:71] >> (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10060)\n')
+Traceback (most recent call last):
+  File "src\pymssql.pyx", line 636, in pymssql.connect
+  File "src\_mssql.pyx", line 1964, in _mssql.connect
+  File "src\_mssql.pyx", line 682, in _mssql.MSSQLConnection.__init__
+  File "src\_mssql.pyx", line 1690, in _mssql.maybe_raise_MSSQLDatabaseException
+_mssql.MSSQLDatabaseException: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10060)\n')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 55, in get_data_from_db
+    conn = pymssql.connect(server="172.20.56.220", user="essmgr", password="essmgr", database="NEXPOM")
+  File "src\pymssql.pyx", line 642, in pymssql.connect
+pymssql.OperationalError: (20009, b'DB-Lib error message 20009, severity 9:\nUnable to connect: Adaptive Server is unavailable or does not exist (172.20.56.220:1433)\nNet-Lib error during Unknown error (10060)\n')
+[2020-10-29 14:35:13,347][ERROR|Inspection.py:143] >> cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/Inspection.py", line 137, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+TypeError: cannot unpack non-iterable NoneType object
+[2020-10-29 14:35:26,788][INFO|inspection2.py:55] >> DB Connect
+[2020-10-29 14:35:26,800][INFO|inspection2.py:74] >> DB Connect fail
+[2020-10-29 14:35:26,800][ERROR|inspection2.py:75] >> ('IM002', '[IM002] [Microsoft][ODBC 드라이버 관리자] 데이터 원본 이름이 없고 기본 드라이버를 지정하지 않았습니다. (0) (SQLDriverConnect)')
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/inspection2.py", line 58, in get_data_from_db
+    "Driver={SQL Server Native Client 11.0};Server=172.20.56.220;Database=NEXPOM;Uid=essmgr;Pwd=essmgr;")
+pyodbc.InterfaceError: ('IM002', '[IM002] [Microsoft][ODBC 드라이버 관리자] 데이터 원본 이름이 없고 기본 드라이버를 지정하지 않았습니다. (0) (SQLDriverConnect)')
+[2020-10-29 14:35:26,800][ERROR|inspection2.py:148] >> cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/inspection2.py", line 142, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+TypeError: cannot unpack non-iterable NoneType object
+[2020-10-29 15:13:30,657][INFO|inspection2.py:55] >> DB Connect
+[2020-10-29 15:13:30,657][INFO|inspection2.py:75] >> DB Connect fail
+[2020-10-29 15:13:30,657][ERROR|inspection2.py:76] >> ('IM002', '[IM002] [Microsoft][ODBC 드라이버 관리자] 데이터 원본 이름이 없고 기본 드라이버를 지정하지 않았습니다. (0) (SQLDriverConnect)')
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/inspection2.py", line 58, in get_data_from_db
+    "Driver={SQL Server Native Client 11.0};Server=172.20.56.220;Database=NEXPOM;Uid=essmgr;Pwd=essmgr;")
+pyodbc.InterfaceError: ('IM002', '[IM002] [Microsoft][ODBC 드라이버 관리자] 데이터 원본 이름이 없고 기본 드라이버를 지정하지 않았습니다. (0) (SQLDriverConnect)')
+[2020-10-29 15:13:30,657][ERROR|inspection2.py:149] >> cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/inspection2.py", line 143, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+TypeError: cannot unpack non-iterable NoneType object
+[2020-10-29 15:17:48,569][INFO|inspection2.py:55] >> DB Connect
+[2020-10-29 15:17:48,569][INFO|inspection2.py:75] >> DB Connect fail
+[2020-10-29 15:17:48,569][ERROR|inspection2.py:76] >> ('IM002', '[IM002] [Microsoft][ODBC 드라이버 관리자] 데이터 원본 이름이 없고 기본 드라이버를 지정하지 않았습니다. (0) (SQLDriverConnect)')
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/inspection2.py", line 58, in get_data_from_db
+    "Driver={SQL Server Native Client 11.0};Server=172.20.56.220;Database=NEXPOM;Uid=essmgr;Pwd=essmgr;")
+pyodbc.InterfaceError: ('IM002', '[IM002] [Microsoft][ODBC 드라이버 관리자] 데이터 원본 이름이 없고 기본 드라이버를 지정하지 않았습니다. (0) (SQLDriverConnect)')
+[2020-10-29 15:17:48,569][ERROR|inspection2.py:149] >> cannot unpack non-iterable NoneType object
+Traceback (most recent call last):
+  File "C:/Users/yujin/PycharmProjects/PdM/inspection2.py", line 143, in main
+    date, serial, tool_cnt, current_data, pre_sum_q = get_data_from_db()
+TypeError: cannot unpack non-iterable NoneType object
